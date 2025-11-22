@@ -160,7 +160,41 @@ flutter build linux --release
 
 ## 🌐 Deployment
 
-### Option 1: Firebase Hosting (Recommended)
+### Option 1: GitHub Pages (Automated) ✅
+
+**This repository is already set up for automatic GitHub Pages deployment!**
+
+Every time you push to the `main` or `master` branch, your website will automatically build and deploy.
+
+**To enable:**
+
+1. **Go to your repository settings** on GitHub
+   - Navigate to `Settings` → `Pages`
+
+2. **Configure source**
+   - Source: `Deploy from a branch`
+   - Branch: `gh-pages`
+   - Folder: `/ (root)`
+
+3. **Save and wait** (first deployment takes 2-3 minutes)
+
+4. **Your site will be live at:**
+   ```
+   https://yourusername.github.io/ukswebsite/
+   ```
+
+**Adding a custom domain:**
+- Go to Settings → Pages → Custom domain
+- Enter your domain (e.g., `www.yourname.com`)
+- Update your DNS settings with a CNAME record pointing to `yourusername.github.io`
+
+**Manual deployment (if needed):**
+```bash
+flutter build web --release --base-href "/ukswebsite/"
+# Then push the build/web contents to gh-pages branch
+```
+
+### Option 2: Firebase Hosting
 
 1. **Install Firebase CLI**
    ```bash
@@ -187,7 +221,7 @@ flutter build linux --release
    - Click "Add custom domain"
    - Follow the instructions to verify and configure DNS
 
-### Option 2: Vercel
+### Option 3: Vercel
 
 1. **Install Vercel CLI**
    ```bash
@@ -206,7 +240,7 @@ flutter build linux --release
    - Settings → Domains
    - Add your custom domain
 
-### Option 3: Netlify
+### Option 4: Netlify
 
 1. **Build**
    ```bash
@@ -223,16 +257,6 @@ flutter build linux --release
    - Go to [Netlify Drop](https://app.netlify.com/drop)
    - Drag the `build/web` folder
 
-### Option 4: GitHub Pages
-
-1. **Build**
-   ```bash
-   flutter build web --release --base-href "/repository-name/"
-   ```
-
-2. **Deploy**
-   - Copy contents of `build/web` to `gh-pages` branch
-   - Enable GitHub Pages in repository settings
 
 ## 📄 Adding Additional Features
 
