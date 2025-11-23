@@ -1,0 +1,21 @@
+{
+  "name": "Alexander Chen - CEO & Visionary Leader",
+  "short_name": "Alexander Chen",
+  "description": "Personal portfolio of Alexander Chen - Technology CEO, Innovation Leader, and Strategic Advisor",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
